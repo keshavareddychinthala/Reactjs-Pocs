@@ -21,7 +21,7 @@ handlePhotoList=async()=>{
   render() {
     return (
     //   <div>PhotoList</div>
-       <React.Fragment >
+       < >
            <div className='container-fluid'>
               <div className='row'>
                    {
@@ -38,7 +38,7 @@ handlePhotoList=async()=>{
                    }
               </div>
            </div>
-       </React.Fragment>
+       </>
     )
   }
 }
