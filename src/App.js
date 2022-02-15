@@ -6,19 +6,20 @@ import PhotoList from './PhotoList';
 import {BrowserRouter as Router,Route, Routes,} from "react-router-dom";
 import React, { Component } from 'react'
 import Dashboard from './Dashboard';
-
+import Login from "./Login";
 export class App extends Component {
   render() {
     return (
-    // <React.Fragment>
+    <React.Fragment>
     <Router>
     <Routes>
-    <Route path="/" element={<PhotoList />} />   
+    <Route path="/" element={<Login />} />   
     <Route path="/todoList" element={<Todolist />} />
     <Route path="/dashboard" element={<Dashboard/>} />
     </Routes>
     </Router>
-    // </React.Fragment>
+    </React.Fragment>
+
     )
   }
 }

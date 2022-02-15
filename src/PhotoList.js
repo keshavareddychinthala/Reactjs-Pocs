@@ -7,6 +7,7 @@ constructor(props) {
   this.state = {
      photos:[]
   }
+  this.handleEach=this.handleEach.bind(this);
 }
 componentDidMount(){
     this.handlePhotoList();
@@ -18,6 +19,9 @@ handlePhotoList=async()=>{
     }
    }).catch(err=>console.log(err,"error"))
 }
+handleEach=()=>{
+   // this.props.history.push("./eachphoto")
+}
   render() {
     return (
     //   <div>PhotoList</div>
@@ -27,7 +31,7 @@ handlePhotoList=async()=>{
                    {
                        this.state.photos.length>0?this.state.photos.map((photo)=>{
                        return(
-                        <div className="card col-md-3 ml-5 mt-5"  key={photo.id}>
+                        <div className="card col-md-3 ml-5 mt-5"  key={photo.id} onClick={this.handleEach}>
                         <img src={`${photo.url}`} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">{photo.title}</h5>
